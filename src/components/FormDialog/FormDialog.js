@@ -18,7 +18,11 @@ export default function FormDialog({open, setOpen}) {
                     <CloseIcon sx={{fontSize: 18, marginLeft: 'auto', cursor: 'pointer'}} onClick={handleClose} className='Form-Dialog-Close grid-row-1 grid-col-2' />
                 </DialogTitle>
                 <DialogContent className='Form-Dialog-Forms' id='Form-Dialog-Forms'>
-                    <div className='Form-Dialog-Content-Group grid-colspan-2'>
+                    <div className='Form-Dialog-Content-Group'>
+                        <label>Title</label>
+                        <input type='text' className='Form-Dialog-Content-Input' />
+                    </div>
+                    <div className='Form-Dialog-Content-Group'>
                         <label>Name</label>
                         <input type='text' className='Form-Dialog-Content-Input' />
                     </div>
