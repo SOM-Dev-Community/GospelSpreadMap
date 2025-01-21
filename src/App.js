@@ -1,5 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Login from "./login"; 
+import React from "react";
+import ReactDOM from "react-dom";
+
+
+
+
+React.createElement("div", null, React.createElement(Login));
+
 
 function App() {
   return (
@@ -21,5 +30,6 @@ function App() {
     </div>
   );
 }
+ReactDOM.render(React.createElement(App), document.getElementById("root"));
 
 export default App;
