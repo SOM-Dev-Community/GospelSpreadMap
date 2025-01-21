@@ -1,4 +1,5 @@
 import './App.css';
+<<<<<<< HEAD
 import React from 'react';
 import Report from './pages/Report/Report';
 import Login from "./login"; 
@@ -9,6 +10,11 @@ import MapView from './components/map/MapView';
 
 React.createElement("div", null, React.createElement(Login));
 
+=======
+import MapView from './components/map/MapView';
+import React from 'react';
+import Report from './pages/Report/Report';
+>>>>>>> a24ccd4 (Project Structuring)
 
 function App() {
   return (
