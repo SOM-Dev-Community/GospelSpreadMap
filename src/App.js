@@ -2,7 +2,7 @@ import './App.css';
 import Report from './pages/Report/Report';
 import SignUp from "./pages/SignUp/SignUp"; // Import the Signup component
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; // Import React Router
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import React Router
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 
