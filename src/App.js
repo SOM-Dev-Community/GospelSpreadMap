@@ -1,32 +1,51 @@
 import './App.css';
-<<<<<<< HEAD
+
 import MapView from './components/map/MapView';
-=======
-import React from 'react';
 import Report from './pages/Report/Report';
->>>>>>> pages/reports-page
-import Login from "./login"; 
+import Login from "./login";
+import Signup from "./signup"; // Import the Signup component
 import React from "react";
-import ReactDOM from "react-dom";
-
-
-
-
-React.createElement("div", null, React.createElement(Login));
-
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; // Import React Router
 
 function App() {
   return (
-    <div className="App">
-<<<< HEAD
-      <h1 className="title1" style={{ color: "white",  fontFamily: "Times new roman" }}>THE GOSPEL SPREAD MAP</h1>
-      <MapView />
-=======
-      <Report />
->>>>>>> pages/reports-page
-    </div>
+    <Router>
+      <div className="App">
+      
+
+        {/* Navigation Links */}
+        <nav style={{ marginBottom: "20px" }}>
+          <Link to="/login" style={{ marginRight: "15px", color: "white", textDecoration: "none" }}>
+            Login
+          </Link>
+          <Link to="/signup" style={{ color: "white", textDecoration: "none" }}>
+            Signup
+          </Link>
+        </nav>
+
+        {/* Define Routes */}
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          {/* Default content: MapView and Report */}
+          <Route
+            path="/"
+            element={
+              <>
+                <MapView />
+                <Report />
+              </>
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+
+// Render the App component using modern React
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
 
 export default App;
