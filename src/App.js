@@ -1,23 +1,26 @@
 import './App.css';
-import React from 'react';
 import Report from './pages/Report/Report';
-import Login from "./login"; 
-import ReactDOM from "react-dom";
-import MapView from './components/map/MapView';
-
-
-
-React.createElement("div", null, React.createElement(Login));
-
+import SignUp from "./pages/SignUp/SignUp"; // Import the Signup component
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; // Import React Router
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
 
 function App() {
+  const [open, setOpen] = React.useState(false);
+
   return (
     <div className="App">
-      <MapView />
-      <Report />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/dashboard" element={<Report open ={open} setOpen = {setOpen}/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
 
 export default App;

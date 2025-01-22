@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as d3 from "d3";
 import "./MapView.css";
+import * as topojson from "topojson-client";
 
 const MapView = () => {
   const svgRef = useRef();
@@ -14,39 +15,6 @@ const MapView = () => {
       .attr("viewBox", `0 0 ${width} ${height}`)
       .attr("preserveAspectRatio", "xMidYMid meet");
 
-    // const zoom = d3.zoom().on("zoom", (event) => {
-    //   svg.selectAll("g").attr("transform", event.transform);
-    // });
-
-    // svg.call(zoom);
-
-
-    // svg
-    //   .selectAll("path")
-    //   .on("mouseover", (event, d) => {
-    //     const name = d.properties.name; // Adjust to match GeoJSON properties
-    //     const tooltip = d3
-    //       .select("body")
-    //       .append("div")
-    //       .attr("class", "tooltip")
-    //       .style("position", "absolute")
-    //       .style("background", "white")
-    //       .style("border", "1px solid black")
-    //       .style("padding", "5px")
-    //       .style("pointer-events", "none")
-    //       .text(name);
-
-    //     tooltip
-    //       .style("left", event.pageX + "px")
-    //       .style("top", event.pageY + "px");
-    //   })
-    //   .on("mouseout", () => {
-    //     d3.select(".tooltip").remove();
-    //   });
-
-
-
-
     const projection = d3
       .geoMercator()
       .scale(150)
@@ -54,43 +22,54 @@ const MapView = () => {
 
     const path = d3.geoPath().projection(projection);
 
+    const tooltip = d3
+      .select("body")
+      .append("div")
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("background", "white")
+      .style("border", "none")
+      .style("padding", "5px")  
+      .style("pointer-events", "none")
+      .style("opacity", 0);
+
     d3.json(
       "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"
     )
       .then((data) => {
-        // Draw the map
         svg
           .selectAll("path")
           .data(data.features)
           .join("path")
           .attr("d", path)
           .attr("fill", "#80c320")
-          .attr("stroke", "#fff")
+          .attr("stroke", "#fff") 
           .on("mouseover", (event, d) => {
+            const countryName = d.properties.ADMIN || d.properties.name; 
+            tooltip
+              .style("opacity", 1)
+              .text(countryName)
+              .style("left", `${event.pageX + 10}px`)
+              .style("top", `${event.pageY + 10}px`);
             d3.select(event.target).attr("fill", "lightgreen");
           })
-          .on("mouseout", (event, d) => {
+          .on("mousemove", (event) => {
+            tooltip
+              .style("left", `${event.pageX - 20}px`)
+              .style("top", `${event.pageY - 30}px`);
+          })
+          .on("mouseout", (event) => {
+            tooltip.style("opacity", 0);
             d3.select(event.target).attr("fill", "#80c320");
           });
-          // Add labels for each country
-        svg.append("g")
-        .selectAll("text")
-        .data(data.features)
-        .join("text")
-        .attr("x", d => {
-          const [x] = projection(d3.geoCentroid(d));
-          return x;
-        })
-        .attr("y", d => {
-          const [, y] = projection(d3.geoCentroid(d));
-          return y;
-        })
-        .text(d => d.properties.ADMIN || d.properties.name) // Use the property with country names
-        .attr("font-size", "3px")
-        .attr("text-anchor", "middle")
-        .attr("fill", "black")
-        .attr("pointer-events", "none"); // Ensure labels don’t interfere with interactions
-    
+
+        svg
+          .append("path")
+          .datum(topojson.mesh(data, data.objects.countries, (a, b) => a !== b)) 
+          .attr("d", path)
+          .attr("fill", "none")
+          .attr("stroke", "")
+          .attr("stroke-width", "1px");
       })
       .catch((error) => console.error("Error loading GeoJSON:", error));
   }, []);
