@@ -5,6 +5,7 @@ import VariantDrawer from '../../components/variantDrawer/VariantDrawer';
 import { Avatar, Button, Divider, Typography } from '@mui/material';
 import PlaceIcon from '@mui/icons-material/Place';
 import { green } from '@mui/material/colors';
+
 import UploadIcon from '@mui/icons-material/Upload';
 import FloatingButton from '../../components/FloatingButton/FloatingButton';
 import ReportsTable from '../../components/ReportsTable/ReportsTable';
