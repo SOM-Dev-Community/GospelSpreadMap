@@ -98,6 +98,7 @@ const MapView = () => {
   return <div>
 
 
+      <h1 className="title1" style={{ color: "white",  fontFamily: "Times new roman" }}>THE GOSPEL SPREAD MAP</h1>
   <svg ref={svgRef}></svg>
   </div>;
 };
