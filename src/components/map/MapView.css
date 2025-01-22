@@ -1,4 +1,9 @@
   
+  .map-view {
+    height: 100%;
+    width: 100%;
+  }
+  
   .responsive-gradient h1 {
     font-size: calc(1.5rem + 2vw); /* Adjust font size based on viewport width */
     color: white;

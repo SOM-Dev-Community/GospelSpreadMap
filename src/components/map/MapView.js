@@ -29,7 +29,7 @@ const MapView = () => {
       .style("position", "absolute")
       .style("background", "white")
       .style("border", "none")
-      .style("padding", "5px")  
+      .style("padding", "5px")
       .style("pointer-events", "none")
       .style("opacity", 0);
 
@@ -43,9 +43,9 @@ const MapView = () => {
           .join("path")
           .attr("d", path)
           .attr("fill", "#80c320")
-          .attr("stroke", "#fff") 
+          .attr("stroke", "#fff")
           .on("mouseover", (event, d) => {
-            const countryName = d.properties.ADMIN || d.properties.name; 
+            const countryName = d.properties.ADMIN || d.properties.name;
             tooltip
               .style("opacity", 1)
               .text(countryName)
@@ -65,7 +65,7 @@ const MapView = () => {
 
         svg
           .append("path")
-          .datum(topojson.mesh(data, data.objects.countries, (a, b) => a !== b)) 
+          .datum(topojson.mesh(data, data.objects.countries, (a, b) => a !== b))
           .attr("d", path)
           .attr("fill", "none")
           .attr("stroke", "")
@@ -74,12 +74,17 @@ const MapView = () => {
       .catch((error) => console.error("Error loading GeoJSON:", error));
   }, []);
 
-  return <div>
-
-
-      <h1 className="title1" style={{ color: "white",  fontFamily: "Times new roman" }}>THE GOSPEL SPREAD MAP</h1>
-  <svg ref={svgRef}></svg>
-  </div>;
+  return (
+    <div className="map-view">
+      <h1
+        className="title1"
+        style={{ color: "white", fontFamily: "Times new roman" }}
+      >
+        THE GOSPEL SPREAD MAP
+      </h1>
+      <svg ref={svgRef}></svg>
+    </div>
+  );
 };
 
 export default MapView;
