@@ -51,8 +51,9 @@ export default function NavigationMenu({ visible, setVisible }) {
           </Link>
         </MenuItem>
         {/* <MenuItem onClick={handleClose}>Logout</MenuItem> */}
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-        <MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/login" className="Link">Login</Link> </MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/signup" className="Link">Signup</Link> </MenuItem>
+        <MenuItem className="home-switch">
           <FormControlLabel
             control={<Switch defaultChecked onChange={toggleVisibility} />}
             label="Show Info"

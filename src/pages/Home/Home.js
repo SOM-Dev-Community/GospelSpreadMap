@@ -18,7 +18,6 @@ const Home = () => {
         <NavigationMenu visible= {visible} setVisible= {setVisible}/>
         <img src={logo} alt='  GSMAP' className='logo'/>
       </nav>
-        <h1 className="title1" style={{ color: "white",  fontFamily: "Times new roman" }}>THE GOSPEL SPREAD MAP</h1>
       <MapView/>
       <div className={visible ? 'reach-percentage' : 'reach-percentage hidden'}>
         <Typography sx={{fontSize: 52, fontStretch: 'expanded', fontFamily: "Smooch sans", lineHeight: "1.1", fontWeight: 500}}>60%</Typography>

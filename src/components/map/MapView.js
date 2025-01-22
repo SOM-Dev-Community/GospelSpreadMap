@@ -74,16 +74,12 @@ const MapView = () => {
       .catch((error) => console.error("Error loading GeoJSON:", error));
   }, []);
 
-<<<<<<< HEAD
-  return <svg ref={svgRef}></svg>;
-=======
   return <div>
 
 
       <h1 className="title1" style={{ color: "white",  fontFamily: "Times new roman" }}>THE GOSPEL SPREAD MAP</h1>
   <svg ref={svgRef}></svg>
   </div>;
->>>>>>> origin/develop
 };
 
 export default MapView;
