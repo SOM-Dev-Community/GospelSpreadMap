@@ -1,40 +1,16 @@
-.App {
-    text-align: center;
-    padding: 20px;
-    /* background: linear-gradient(to bottom, rgb(64, 193, 228), transparent 90%),
-      linear-gradient(to right, rgb(122, 166, 179), transparent 90%),
-      linear-gradient(to left, rgb(0, 208, 255), transparent 50%),
-      linear-gradient(to top, rgb(80, 179, 190), transparent 90%),
-      linear-gradient(to bottom, rgba(33, 119, 165, 0.228) 90%, white 100%);
-      background-blend-mode: screen;
-      height: 200vh; */
-      
-    background-image:url(../../assets/istockphoto-1328689113-612x612.jpg);
-    background: linear-gradient(rgb(10, 49, 80), transparent 90%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 150vh;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-  }
-  
-  h1 {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  .App {
-    padding: 20px;
-  }
   
   .responsive-gradient h1 {
     font-size: calc(1.5rem + 2vw); /* Adjust font size based on viewport width */
     color: white;
     text-align: center;
+  }
+
+  .tooltip {
+    font-size: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   /* Ensure responsive spacing for small devices */

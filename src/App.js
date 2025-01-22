@@ -1,30 +1,26 @@
-import './App.css';
-<<<<<<< HEAD
-import React from 'react';
-import Report from './pages/Report/Report';
-import Login from "./login"; 
-import ReactDOM from "react-dom";
-import MapView from './components/map/MapView';
+import "./App.css";
+import React, {useState} from "react";
+import Report from "./pages/Report/Report";
+import Login from "./pages/Login/Login";
+import Home from "./pages/Home/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
-
-React.createElement("div", null, React.createElement(Login));
-
-=======
-import MapView from './components/map/MapView';
-import React from 'react';
-import Report from './pages/Report/Report';
->>>>>>> a24ccd4 (Project Structuring)
 
 function App() {
+  const [open, setOpen] = React.useState(false);
+
   return (
     <div className="App">
-      <h1 className="title1" style={{ color: "white",  fontFamily: "Times new roman" }}>THE GOSPEL SPREAD MAP</h1>
-      <MapView />
-      <Report />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Report open ={open} setOpen = {setOpen}/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
 
 export default App;

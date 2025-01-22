@@ -1,16 +1,21 @@
-import { Dialog, DialogContent, DialogTitle } from '@mui/material'
-import React from 'react'
+import { Dialog, DialogContent, DialogTitle, useMediaQuery } from '@mui/material'
+import React, { useEffect } from 'react'
 import './FormDialog.css'
 import CustomTooltip from '../CustomTooltip/CustomTooltip'
 import CloseIcon from '@mui/icons-material/Close';
 
 export default function FormDialog({open, setOpen}) {
+    const [screen, setScreen]= React.useState(false)
     const handleClose = () => {
       setOpen(false);
     };
+    const matches = useMediaQuery("(min-width:768px)");
+    useEffect(()=> {
+        setScreen(matches)
+    }, [matches])
     const text = 'Instructions for uploading the report';
     return (
-        <Dialog open= {open} onClose={handleClose} aria-labelledby="form-dialog-title" className='Form-Dialog'>
+        <Dialog open= {open} onClose={handleClose} aria-labelledby="form-dialog-title" className='Form-Dialog' fullScreen={!screen}>
             <DialogContent className='Form-Dialog-Content-Wrapper'>
                 <DialogTitle id="Form-Dialog-Title">
                     <p className=''>Upload Report <CustomTooltip text={text} /></p>
