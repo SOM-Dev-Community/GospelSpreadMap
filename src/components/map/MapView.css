@@ -1,0 +1,40 @@
+  
+  .map-view {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .responsive-gradient h1 {
+    font-size: calc(1.5rem + 2vw); /* Adjust font size based on viewport width */
+    color: white;
+    text-align: center;
+  }
+
+  .tooltip {
+    font-size: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ensure responsive spacing for small devices */
+  @media (max-width: 768px) {
+    .responsive-gradient {
+      height: 80vh; /* Adjust height for smaller devices */
+    }
+  
+    .responsive-gradient h1 {
+      font-size: calc(1.2rem + 1.5vw); /* Slightly smaller font for small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .responsive-gradient {
+      height: 70vh; /* Further reduce height for very small devices */
+    }
+  
+    .responsive-gradient h1 {
+      font-size: 1.5rem; /* Fixed font size for ultra-small screens */
+    }
+  }

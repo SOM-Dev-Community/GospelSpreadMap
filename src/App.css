@@ -1,0 +1,11 @@
+.hidden {
+  visibility: none;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .logo {
+      width: 120px;
+  }
+}
+
