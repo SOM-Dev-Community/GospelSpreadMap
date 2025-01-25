@@ -2,17 +2,13 @@
 
 .Home {
   text-align: center;
-  padding: 15px 15px 0 15px;
+  /* padding: 0 15px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../../assets/gsmappp1.png);
-  /* background: linear-gradient(rgb(10, 49, 80) , #f9f9f9); */
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  max-width: 100vw;
-  overflow: hidden;
   position: relative;
 }
 
@@ -35,12 +31,11 @@
 
 .color-codes-info {
   position: fixed;
-  background: #FFF;
+  background: rgb(255, 255, 255, 0.95);
   text-align: left;
   left: 20px;
-  bottom: 20%;
+  bottom: 15%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
   .color-codes {
     border-right: 50px solid blue;
   }
@@ -52,6 +47,10 @@
 
 .home-navbar {
   display: flex;
+  position: fixed;
+  top: 0;
+  padding: 15px;
+  z-index: 1;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -63,10 +62,11 @@
 }
 
 @media (min-width: 768px) {
-  .Home {
-    padding: 40px 40px 0 40px;
+  .Home,
+  .home-navbar {
+    /* padding: 0 40px; */
   }
   .logo {
     width: 120px;
-}
+  }
 }
