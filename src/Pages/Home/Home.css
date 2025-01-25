@@ -62,10 +62,7 @@
 }
 
 @media (min-width: 768px) {
-  .Home,
-  .home-navbar {
-    /* padding: 0 40px; */
-  }
+
   .logo {
     width: 120px;
   }
