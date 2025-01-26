@@ -8,4 +8,7 @@ export default defineConfig({
     CESIUM_BASE_URL: JSON.stringify('/Cesium'),
   },
   assetsInclude: ['**/*.geojson'],
+  build:{
+    outDir: 'dist',
+  }
 });
