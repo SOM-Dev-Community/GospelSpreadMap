@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './Home.css'
 import { Button, Divider, Typography, useMediaQuery } from '@mui/material'
-import { green } from '@mui/material/colors'
+import { green, blue } from '@mui/material/colors'
 import NavigationMenu from '../../components/NavigationMenu/NavigationMenu'
 import logo from '../../assets/GSMAPLOGO.png'
 import GlobeComponent from '../../components/GlobeComponent/GlobeComponent'
