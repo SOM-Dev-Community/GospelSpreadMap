@@ -1,10 +1,10 @@
 import './App.css';
-import Report from './pages/Report/Report.jsx';
 import SignUp from "./pages/SignUp/SignUp.jsx"; // Import the Signup component
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import React Router
 import Home from './pages/Home/Home.jsx';
 import Login from './pages/Login/Login.jsx';
+import Reports from './Pages/Reports/Reports.jsx';
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/dashboard" element={<Report open ={open} setOpen = {setOpen}/>} />
+          <Route path="/dashboard" element={<Reports open ={open} setOpen = {setOpen}/>} />
         </Routes>
       </Router>
     </div>
