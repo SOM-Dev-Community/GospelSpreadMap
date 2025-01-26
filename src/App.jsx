@@ -1,10 +1,10 @@
 import './App.css';
-import Report from './pages/Report/Report';
-import SignUp from "./pages/SignUp/SignUp"; // Import the Signup component
+import Report from './pages/Report/Report.jsx';
+import SignUp from "./pages/SignUp/SignUp.jsx"; // Import the Signup component
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import React Router
-import Home from './pages/Home/Home';
-import Login from './pages/Login/Login';
+import Home from './pages/Home/Home.jsx';
+import Login from './pages/Login/Login.jsx';
 
 function App() {
   const [open, setOpen] = React.useState(false);
