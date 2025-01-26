@@ -1,179 +1,169 @@
+/* Reset styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
 .container {
   display: flex;
   min-height: 100vh;
-  width: 70%;
-  margin-left: 15%;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    #007aa5,
-    #69b34c
-  ); /* Adjusted gradient */
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 20px;
 }
 
-/* Left Panel Styling */
 .left-panel {
   flex: 1;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  font-size: 1.2rem;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
   text-align: center;
-  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel-logo {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.left-panel h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .left-panel-text {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
 }
 
-/* Login Form Styling */
 .login-form {
   flex: 1;
-  max-width: 500px;
-  height: 100%;
-  background: #ffffff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo */
-.left-panel-logo {
-  width: 150px;
-  margin-bottom: 40px;
+.login-form h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-/* Google Sign-Up Button */
 .google-signup-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60%;
   padding: 10px;
-  font-size: 1rem;
-  color: #555;
-  background: #ffffff;
-  border: 1px solid #ddd;
+  border: none;
+  background-color: #f4f4f4;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 15px;
-  transition: all 0.3s ease;
-}
-
-.google-signup-btn:hover {
-  background: #f5f5f5;
-  border-color: #bbb;
 }
 
 .google-logo {
   width: 20px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
-/* Separator */
 .separator {
-  display: flex;
-  align-items: center;
   text-align: center;
-  margin: 5px 0;
-  font-size: 0.9rem;
-  color: #aaa;
+  margin: 15px 0;
+  position: relative;
 }
 
 .separator span {
-  background: #ffffff;
+  background: #f4f4f4;
   padding: 0 10px;
+  color: #888;
 }
 
-.separator:before,
-.separator:after {
+.separator::before,
+.separator::after {
   content: "";
-  flex: 1;
+  position: absolute;
+  top: 50%;
+  width: 40%;
   height: 1px;
-  background: #ddd;
+  background: #ccc;
 }
 
-/* Form Groups */
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form-group {
-  width: 100%;
   margin-bottom: 15px;
 }
 
 .form-group label {
   display: block;
-  font-size: 1rem;
+  font-weight: bold;
   margin-bottom: 5px;
-  color: #555;
 }
 
 .form-group input {
-  width: 100%;
-  padding: 20px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  outline: none;
-}
-
-.form-group input:focus {
-  border-color: #007aa5;
-  box-shadow: 0 0 5px rgba(0, 122, 165, 0.3);
-}
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-/* Login Button */
-.login-btn {
-  width: 100%;
   padding: 10px;
-  font-size: 1rem;
-  background: #007aa5;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-btn {
+  padding: 10px;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .login-btn:hover {
-  background: #005f82;
-}
-
-/* Helper Links */
-.helper-links {
-  margin-top: 15px;
-  text-align: center;
+  background-color: #0056b3;
 }
 
 .helper-links p {
-  margin: 5px 0;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
 }
 
 .helper-links a {
-  color: #007aa5;
+  color: #007bff;
   text-decoration: none;
 }
 
 .helper-links a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .left-panel,
+  .login-form {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 }
