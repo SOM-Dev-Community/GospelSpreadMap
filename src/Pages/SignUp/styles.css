@@ -1,15 +1,10 @@
 .container {
   display: flex;
   min-height: 100vh;
-  width: 70%;
-  margin-left: 15%;
+  width: auto;
+  /* margin-left: 15%; */
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    #007aa5,
-    #69b34c
-  ); /* Adjusted gradient */
 }
 
 /* Left Panel Styling */
