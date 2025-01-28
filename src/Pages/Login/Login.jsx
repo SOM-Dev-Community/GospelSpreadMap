@@ -51,7 +51,7 @@ function Login() {
 
         {/* Separator */}
         <div className="separator">
-          <span>or</span>
+          <span>OR</span>
         </div>
 
         <form onSubmit={handleSubmit}>
