@@ -1,7 +1,5 @@
 /* Reset styles */
 body, html {
-  margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
 }
@@ -18,11 +16,14 @@ body, html {
 .left-panel {
   flex: 1;
   max-width: 400px;
+  height: 490px;
   padding: 20px;
   background-color: #ffffff;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background: linear-gradient(120deg, #3498db, #44ad60); */
+  background-image: url(../../assets/gsmappp1.png);
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .left-panel-logo {
@@ -38,16 +39,18 @@ body, html {
 
 .left-panel-text {
   font-size: 16px;
-  color: #555;
+  color: #ffffff;
 }
 
 .login-form {
-  flex: 1;
+  /* flex: 1; */
   max-width: 400px;
+  height: 490px;
   padding: 20px;
   background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: .5px;
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .login-form h2 {
@@ -81,8 +84,9 @@ body, html {
 
 .separator span {
   background: #f4f4f4;
-  padding: 0 10px;
+  padding: 0 10px 0;
   color: #888;
+  justify-content: space-between;
 }
 
 .separator::before,
@@ -109,7 +113,15 @@ form {
 }
 
 .form-group {
+  width: 250px;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group2{
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
@@ -119,6 +131,12 @@ form {
 }
 
 .form-group input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-group2 input {
   padding: 10px;
   width: 100%;
   border: 1px solid #ccc;
@@ -163,7 +181,15 @@ form {
 
   .left-panel,
   .login-form {
-    max-width: 100%;
-    margin-bottom: 20px;
+    width: 390px;
+    /* margin-bottom: 20px; */
+  }
+}
+@media (max-width: 768px) {
+  .container{
+    flex-direction: row;
+  }
+  .left-panel{
+    display: none;
   }
 }
