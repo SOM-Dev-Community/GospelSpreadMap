@@ -89,7 +89,7 @@ function Login() {
             Forgot your password? <a href="/reset-password">Reset it here</a>
           </p>
           <p>
-            Don't have an account? <a href="/signup">Sign up now</a>
+          Don't have an account?,<Link to="/signup"> Sign up now!</Link>
           </p>
         </div>
       </div>
