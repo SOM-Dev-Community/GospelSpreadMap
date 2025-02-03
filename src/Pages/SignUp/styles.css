@@ -142,7 +142,17 @@ input {
 
 /* Login Button */
 .login-btn {
-  width: 100%;
+  .login-btn {
+  width: 70%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
   padding: 10px;
   font-size: 1rem;
   background: #007aa5;
