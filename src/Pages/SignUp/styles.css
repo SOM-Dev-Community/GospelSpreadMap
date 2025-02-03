@@ -114,8 +114,11 @@
   padding: 20px;
   font-size: 1rem;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   outline: none;
+  border-top: #cccccc00;
+  border-left: #cccccc00;
+  border-right: #cccccc00;
 }
 
 .form-group input:focus {
@@ -133,7 +136,7 @@ input {
   padding: 8px;
   font-size: 1rem;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   box-sizing: border-box;
 }
 
