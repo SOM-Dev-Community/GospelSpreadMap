@@ -87,7 +87,7 @@ function SignUp() {
         </button>
         <div className="helper-links">
           <p>
-            <Link to="/login">Already have an account? Login</Link>
+            Already have an account?<Link to="/login"> Login</Link>
           </p>
         </div>
       </form>
