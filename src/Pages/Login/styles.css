@@ -132,14 +132,17 @@ form {
 .form-group input {
   padding: 10px;
   width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #dcdcdc;
+  /* border-radius: 5px; */
+  border-top: #cccccc00;
+  border-left: #cccccc00;
+  border-right: #cccccc00;
 }
 .form-group2 input {
   padding: 10px;
   width: 100%;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .login-btn {
