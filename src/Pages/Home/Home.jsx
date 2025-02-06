@@ -28,7 +28,7 @@ const Home = () => {
         <Divider/>
         <Typography className='color-codes' sx={{padding: "5px", fontSize: 14}}>Where the Gospel has reached</Typography>
       </div>
-      <Button sx={{flexDirection:"column", backgroundColor: blue[800], color: 'black', position: "fixed", bottom: "5%"}}>
+      <Button sx={{flexDirection:"column", backgroundColor: blue[800], color: 'black', position: "fixed", bottom: "5%", marginLeft: "10px", marginRight: "10px", padding: "10px", borderRadius: "10px", fontSize: 12, boxShadow: "none", alignItems: "center", justifyContent: "center"}}>
         <Typography sx={{fontWeight: 800, lineHeight: 1.1, fontSize: 16}}>CLICK TO UPLOAD YOUR REPORT IF YOU HAVE EVANGELIZED</Typography>
         <Typography sx={{fontWeight: 600, fontSize:12}}>STREET, TOWN, CITY, STATE, COUNTRY FOR THE GOSPEL</Typography>
       </Button>

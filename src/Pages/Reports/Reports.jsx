@@ -6,7 +6,8 @@ import FormDialog from "../../components/FormDialog/FormDialog";
 import { Avatar, Button, Typography } from "@mui/material";
 import PlaceIcon from "@mui/icons-material/Place";
 import { green } from "@mui/material/colors";
-
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { Link } from "react-router-dom";
 import UploadIcon from "@mui/icons-material/Upload";
 import FloatingButton from "../../components/FloatingButton/FloatingButton";
 import ReportsTable from "../../components/ReportsTable/ReportsTable";
@@ -24,6 +25,25 @@ const Reports = ({open, setOpen}) => {
       {/* <VariantDrawer drawerOpen={drawerOpen} setDrawerOpen={setDrawerOpen} setFormDialogOpen={setOpen} /> */}
       <FormDialog open={open} setOpen={setOpen} />
       <FloatingButton />
+      <Button variant="contained" color="primary" 
+      sx={{
+        margin: "20px",
+        marginLeft: "20px",
+        marginRight: "20px",
+        marginBottom: "0px",
+        backgroundColor: "rgba(48, 48, 48, 0.1)",
+        color: "blue",
+        padding: "10px",
+        borderRadius: "10px",
+        fontSize: 12,
+        boxShadow: "none",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+      >
+        <ArrowBackIosIcon sx={{ fontSize: 12 }} />
+        <Link to="/" className="Link">Back to Home</Link>
+      </Button>
       <div className="report-header">
         <div className="report-header-wrapper">
           <div className="report-header-title">

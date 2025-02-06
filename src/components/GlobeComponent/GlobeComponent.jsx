@@ -67,7 +67,7 @@ console.log(countries);
       Cesium.ScreenSpaceEventType.LEFT_DOUBLE_CLICK
     );
 
-    viewer.scene.screenSpaceCameraController.maximumZoomDistance = 20000000;
+    viewer.scene.screenSpaceCameraController.maximumZoomDistance = 50000000;
     viewer.camera.flyTo({
       destination: Cesium.Cartesian3.fromDegrees(
         139.767052,

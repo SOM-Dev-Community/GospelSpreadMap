@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import "./styles.css";
 
 function Login() {
@@ -20,6 +22,24 @@ function Login() {
   
   return (
     <div className="container">
+      <Button variant="contained" color="primary" 
+      sx={{
+        position: "absolute",
+        top: "5%",
+        right: "2%",
+        backgroundColor: "rgba(48, 48, 48, 0.1)",
+        color: "blue",
+        padding: "10px",
+        borderRadius: "10px",
+        fontSize: 12,
+        boxShadow: "none",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+      >
+        <ArrowBackIosIcon sx={{ fontSize: 12 }} />
+        <Link to="/" className="Link">Back to Home</Link>
+      </Button>
       {/* Left Panel */}
       <div className="left-panel">
       <img
