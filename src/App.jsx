@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Im
 import Home from './Pages/Home/Home.jsx';
 import Login from './Pages/Login/Login.jsx';
 import Reports from './Pages/Reports/Reports.jsx';
+import PasswordReset from './Pages/PasswordReset/PasswordReset.jsx';
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/reset" element={<PasswordReset />} />
           <Route path="/dashboard" element={<Reports open ={open} setOpen = {setOpen}/>} />
         </Routes>
       </Router>
