@@ -106,7 +106,7 @@ function Login() {
         {/* Helper Links */}
         <div className="helper-links">
           <p>
-            Forgot your password? <a href="/reset">Reset it here</a>
+            Forgot your password? <Link to= "/reset" > Reset it here</Link>
           </p>
           <p>
           Don't have an account?,<Link to="/signup"> Sign up now!</Link>
